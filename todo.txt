@@ -1,0 +1,16 @@
+# restore
+df.write \
+    .format("jdbc") \
+    .option("url", "jdbc:postgresql://{}:5432/{}".format(host, "dmp_usecase_dev")) \
+    .option("dbtable", "test_restore") \
+    .option("user", username) \
+    .option("password", password) \
+    .option("driver", "org.postgresql.Driver") \
+    .option("truncate", "true") \
+    .mode("overwrite") \
+    .save()
+
+
+# don't forget to cast geom column to Point()
+# ALTER TABLE test_restore 
+#    ALTER COLUMN geom TYPE geometry(Point, 4326);

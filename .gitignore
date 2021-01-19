@@ -1,0 +1,4 @@
+backup/
+**/.ipynb_checkpoints/
+__pycache__/
+environments/secrets.json
