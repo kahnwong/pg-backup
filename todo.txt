@@ -12,5 +12,5 @@ df.write \
 
 
 # don't forget to cast geom column to Point()
-# ALTER TABLE test_restore 
+# ALTER TABLE test_restore
 #    ALTER COLUMN geom TYPE geometry(Point, 4326);
