@@ -31,8 +31,8 @@ username = secrets['username']
 password = secrets['password']
 
 ### read table_names
-with open('resources/table_names.json', 'r') as f:
-    table_names = json.loads(f.read())
+with open('resources/table_names.txt', 'r') as f:
+    table_names = [i.strip() for i in f.readlines()]
 
 ### backup
 for index, table_name in enumerate(table_names, 1):
